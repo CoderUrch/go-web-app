@@ -8,7 +8,7 @@ image:
   repository: urchytech/go-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "16572372772"
+  tag: "16572403500"
 
 ingress:
   enabled: true
