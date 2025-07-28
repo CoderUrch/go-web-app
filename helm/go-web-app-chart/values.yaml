@@ -7,18 +7,17 @@ replicaCount: 1
 image:
   repository: urchytech/go-app
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "16568296232"
+  tag: "16568296232"  # Overrides the image tag whose default is the chart appVersion.
 
 ingress:
-  enabled: false
-  className: ""
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  enabled: true
+  className: "nginx"
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
   hosts:
-    - host: chart-example.local
+    - host: go-web-app.local
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
+
 
