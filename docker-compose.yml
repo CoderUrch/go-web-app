@@ -1,0 +1,9 @@
+services:
+  web:
+    container_name: go-web-app
+    build: .
+    ports:
+      - "8081:8080"
+    volumes:
+      - .:/app
+  
