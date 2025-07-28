@@ -16,7 +16,7 @@ ingress:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
   hosts:
-    - host: go-web-app.local
+    - host: ae20cf7c1a5a84d54b34016b4286046e-7353f952d7ea4b0d.elb.eu-north-1.amazonaws.com
       paths:
         - path: /
           pathType: Prefix
